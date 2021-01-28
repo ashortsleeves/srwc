@@ -1,9 +1,156 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+// Colors
+$black:                 #000;
+$white:                 #fff;
+$orange:                #f88002;
+$green:                 #11ab80;
+$darkgreen:             #0b6b50;
+$red:                   #d14322;
+
+$brand-primary:         $orange;
+$brand-secondary:       $green;
+
 $theme-colors: (
-  primary: #525ddc
+  primary:              $brand-primary,
 );
+
+// Fonts
+$primary-font:          'Oxygen', sans-serif;
+$secondary-font:        'Rubik', sans-serif;
+$body-font-size:        17px;
+$body-font-weight:      400;
+$body-font:             $primary-font;
+$body-color:            $black;
+$heading-font:          $secondary-font;
+$heading-color:         $black;
+$h1-weight:             700;
+$h1-size:               36px;
+$h2-weight:             400;
+$h2-size:               26px;
+$h3-weight:             400;
+$h3-size:               18px;
+
+// Base Styles
+$base-transition:       0.3s ease-in-out;
+$section-padding:       30px;
+
+//Side-Nav
+$sideNavWidth: 260px;
+$sideNavDirection: (right);
+
+$button_width: 40px;     // width of button area
+$button_height: 60px;     // height of button area
+$bar_thickness: 6px;     // thickness of button bars
+$bar_roundness: 0;
+$button_pad: 0;      // left/right padding between button area and bars.
+$button_bar_space: 8px;     // spacing between button bars
+$button_transistion_duration: 0.3s;  // transition duration
+$hamburger_normal: $brand-primary;
+$hamburger_active: $brand-primary;
+
+// Bootstrap Variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  wd: 1440px,
+  hd: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  wd: 1400px,
+  hd: 1560px
+);
+
+// Breakpoint variables
+$width_mobile:          480px;
+$width_phablet:         576px;
+$width_tablet:          768px;
+$width_laptop:          992px;
+$width_desktop:         1200px;
+$width_wide:            1440px;
+$width_hd:              1600px;
+
+/*
+ * Mixins
+ */
+// Media query mixins
+@mixin mobile { @media (min-width: #{$width_mobile}) { @content; } }
+
+@mixin phablet { @media (min-width: #{$width_phablet}) { @content; } }
+
+@mixin tablet { @media (min-width: #{$width_tablet}) { @content; } }
+
+@mixin laptop { @media (min-width: #{$width_laptop}) { @content; } }
+
+@mixin desktop { @media (min-width: #{$width_desktop}) { @content; } }
+
+@mixin wide { @media (min-width: #{$width_wide}) { @content; } }
+
+@mixin hd { @media (min-width: #{$width_hd}) { @content; } }
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin stretch($offset: 0) {
+  position: absolute;
+  top: #{$offset};
+  right: #{$offset};
+  left: #{$offset};
+  bottom: #{$offset};
+  z-index: 99;
+}
+
+@mixin smooth-fonts() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin letter-spacing($letter-spacing: 0) {
+  letter-spacing: calc(#{$letter-spacing} * 0.001em);
+}
+
+// Flexbox mixin - prevents most IE 11 issues
+@mixin flex($grow: 0, $shrink: 0, $basis: 100%) {
+  flex: #{$grow} #{$shrink} #{$basis};
+  width: #{$basis};
+  max-width: #{$basis};
+}
+
+// Padding Offset Mixin
+@mixin padding-offset($parent: 0, $selector: '', $child: $parent) {
+  margin-left: -#{$parent};
+  margin-right: -#{$parent};
+
+  #{$selector} {
+    padding-left: #{$child};
+    padding-right: #{$child};
+  }
+}
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;

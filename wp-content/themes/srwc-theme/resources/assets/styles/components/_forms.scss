@@ -17,3 +17,154 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+.gform_wrapper {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .gfield {
+    margin-bottom: 30px;
+
+    input,
+    textarea {
+      border: none;
+      padding: 12px 10px;
+      width: 100%;
+      font-size: 16px;
+      background-color: #ececec;
+    }
+
+    textarea {
+      height: 180px;
+    }
+
+    label.gfield_label {
+      font-weight: 700;
+    }
+
+    .ginput_container_name,
+    .ginput_container_email {
+      display: flex;
+      flex-direction: row;
+
+      span:first-of-type {
+        margin-right: 2%;
+      }
+    }
+
+    .ginput_full input {
+      margin-bottom: 15px;
+    }
+
+    // .address_state select {
+    //   // height: 40px;
+    // }
+
+    .ginput_complex {
+      label {
+        font-size: 14px;
+      }
+
+      .name_first,
+      .name_last,
+      .address_city,
+      .address_state,
+      .address_zip,
+      .address_country {
+        display: inline-flex;
+        flex-direction: column;
+        width: 49%;
+        margin-bottom: 15px;
+      }
+
+      .address_city,
+      .address_zip {
+        margin-right: 2%;
+      }
+    }
+  }
+
+  li.gfield select {
+    border: 0;
+    background-color: #efefef;
+    appearance: none;
+    border-radius: 0 !important;
+    position: relative;
+    padding: 12px 10px;
+    width: 100%;
+  }
+
+  .gform_footer {
+    input[type=submit] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+
+  .g-recaptcha label {
+    @extend .sr-only;
+  }
+
+  .hide-label,
+  .hidden_label {
+    > label.gfield_label {
+      display: none;
+    }
+  }
+}
+
+.form-container {
+  .mobile-hide {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  .desktop-hide {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  .col-content {
+    margin-bottom: 15px;
+  }
+}
+
+.ui-datepicker {
+  display: none;
+  background-color: #fff;
+  z-index: 999;
+  padding: 15px;
+  box-shadow: 7px 6px 27px -10px rgba(0,0,0,0.5);
+
+  a.ui-datepicker-prev,
+  select.ui-datepicker-month {
+    margin-right: 15px;
+  }
+
+  a.ui-datepicker-prev,
+  a.ui-datepicker-next {
+
+  }
+
+  td,
+  .ui-datepicker-title {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .ginput_recaptcha {
+    transform: scale(.9);
+    transform-origin: 0 0;
+  }
+}
