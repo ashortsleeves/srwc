@@ -1,20 +1,57 @@
 .sideNav {
   width: $sideNavWidth;
   #{$sideNavDirection}: -$sideNavWidth;
-  // box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 1000;
   height: 100%;
   top: 0;
-  background: $brand-primary;
+  background: #fff;
   transition: all 0.3s ease;
   overflow-y: auto;
   padding: 10px 0;
 
+  ul.nav {
+    display: flex;
+    flex-direction: column;
+
+    li.current_page_item,
+    li.current-menu-parent {
+
+
+      > a {
+        background-color: $orange;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+
+    ul.dropdown-menu.show {
+      margin-top: 0;
+      box-shadow: inset inset 2px 0 14px -1px rgba(0, 0, 0, 0.15);
+      position: relative!important;
+      transform: none!important;
+      border-radius: 0;
+      border: transparent;
+      width: 100%;
+      padding: 0;
+
+      li.current_page_item>a {
+        background-color: rgba($orange, 0.7);
+      }
+
+      a {
+        padding-left: 35px;
+      }
+    }
+  }
+
   a,
   span {
     display: block;
-    color: $white;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     font-size: 16px;
     padding: 12px 20px;
   }

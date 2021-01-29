@@ -19,7 +19,7 @@ $theme-colors: (
 // Fonts
 $primary-font:          'Oxygen', sans-serif;
 $secondary-font:        'Rubik', sans-serif;
-$body-font-size:        17px;
+$body-font-size:        16px;
 $body-font-weight:      400;
 $body-font:             $primary-font;
 $body-color:            $black;
@@ -150,6 +150,17 @@ $width_hd:              1600px;
     padding-left: #{$child};
     padding-right: #{$child};
   }
+}
+
+@mixin pseudo {
+  content: " ";
+  display: block;
+}
+
+@mixin jumbo-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */

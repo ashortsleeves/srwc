@@ -22,6 +22,10 @@
   -o-transition: background $button_transistion_duration;
   transition: background $button_transistion_duration;
 
+  @include desktop {
+    display: none;
+  }
+
   &:focus {
     outline: none;
   }

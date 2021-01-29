@@ -30,4 +30,14 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function header() {
+      $data = [
+        'logo'       => get_field('logo', 'option'),
+        'btn'        => get_field('header_button', 'option'),
+        'banner'     => get_field('header_banner', 'option'),
+      ];
+
+      return $data;
+    }
 }

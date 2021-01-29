@@ -1,0 +1,10 @@
+section.responsive-hero {
+  width: 100%;
+  height: 40vh;
+
+  @include tablet {
+    height: 50vh;
+  }
+
+  @include jumbo-bg;
+}

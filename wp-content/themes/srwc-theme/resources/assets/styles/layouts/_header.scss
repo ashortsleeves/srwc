@@ -1,7 +1,223 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+header.banner {
+  background-color: #fff;
+  box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.17);
 
-.banner .nav a {
-  @extend .nav-link;
+  @include tablet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 22px;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include desktop {
+      justify-content: center;
+    }
+  }
+
+  a.brand {
+    display: inline-block;
+    margin-right: auto;
+
+    img {
+      height: auto;
+      width: 100px;
+    }
+
+
+    @include tablet {
+      padding: 10px;
+      box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.17);
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: -14px;
+      z-index: 99;
+      background-color: #fff;
+      transition: $base-transition;
+      overflow: hidden;
+
+      img {
+        width: 140px;
+      }
+    }
+
+    @include desktop {
+      padding: 20px;
+      top: -13px;
+
+      img {
+        width: auto;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+
+      @include tablet {
+        box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  ul.nav {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      display: flex;
+    }
+
+    li {
+      @extend .nav-item;
+
+      a {
+        @extend .nav-link;
+
+        color: #333;
+        text-transform: uppercase;
+        display: block;
+        padding: 20px 10px;
+        position: relative;
+
+        @include wide {
+          padding: 20px;
+          letter-spacing: 0.05em;
+        }
+
+        &:before {
+          @include pseudo;
+
+          background-color: $darkgreen;
+          position: absolute;
+          // opacity: 0.8;
+          top: 0;
+          left: 50%;
+          right: 50%;
+          bottom: 0;
+          z-index: -1;
+          transition: $base-transition;
+        }
+
+        &:hover,
+        &:focus {
+          color: #fff;
+
+          &:before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      ul.dropdown-menu {
+        border: transparent;
+        border-radius: 0;
+        box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.17);
+        padding: 0;
+
+        a {
+          text-transform: capitalize;
+          padding: 10px;
+          border-bottom: solid 1px #ececec;
+
+          &:before {
+            left: 0;
+            right: 100%;
+            opacity: 0.7;
+            background-color: $green;
+          }
+
+          &:hover,
+          &:focus {
+            text-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 1);
+
+            &:before {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a.btn {
+    margin-right: 15px;
+
+    @include desktop {
+      position: absolute;
+      right: 0;
+      top: 7px;
+      margin-right: 0;
+    }
+  }
+
+  a.banner {
+    display: block;
+    background-color: $orange;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    line-height: 1;
+    font-weight: 700;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    @include laptop {
+    padding: 13px 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+      &::before,
+      &::after {
+        @include pseudo;
+
+        transition: $base-transition;
+        height: 2px;
+        width: 30px;
+        background-color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &::before {
+        margin-right: 30px;
+      }
+
+      &::after {
+        margin-left: 30px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      transition: $base-transition;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($orange, 10);
+
+      span {
+        transform: scale(1.03);
+      }
+
+      &::before,
+      &::after {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+    }
+  }
 }
