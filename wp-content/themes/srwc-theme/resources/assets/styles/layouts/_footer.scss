@@ -1,0 +1,71 @@
+section.footer-cta {
+  position: relative;
+  padding-top: 30px;
+  z-index: 1;
+
+  @include phablet {
+    padding-top: 60px;
+  }
+
+  img.mountains {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+
+    @include mobile {
+      padding-bottom: 90px;
+    }
+
+    @include phablet {
+      padding-bottom: 200px;
+    }
+    //
+    // @include desktop {
+    //   padding-bottom: 300px;
+    // }
+    //
+    // @include wide {
+    //   padding-bottom: 400px;
+    // }
+    //
+    // @include hd {
+    //   padding-bottom: 500px;
+    // }
+
+    @include desktop {
+      padding-bottom: 20vw;
+    }
+  }
+
+  .cta {
+    position: relative;
+    max-width: 550px;
+    text-align: center;
+    padding: 15px;
+
+    @include mobile {
+      padding: 30px;
+    }
+
+    @include laptop {
+      padding: 60px;
+    }
+
+    h2 {
+      color: $orange;
+      line-height: 1;
+
+      @include laptop {
+        font-size: 60px;
+      }
+    }
+  }
+}

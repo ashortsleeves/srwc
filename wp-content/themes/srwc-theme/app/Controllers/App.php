@@ -40,4 +40,12 @@ class App extends Controller
 
       return $data;
     }
+
+    public function footer() {
+      $data = [
+        'cta' => get_field('contact_footer_content', 'option'),
+      ];
+
+      return $data;
+    }
 }

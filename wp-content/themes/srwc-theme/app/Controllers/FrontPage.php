@@ -10,7 +10,7 @@ class FrontPage extends Controller
     return get_field('call_to_action');
   }
 
-  public function section() {
+  public function sections() {
     return get_field('sections');
   }
 }

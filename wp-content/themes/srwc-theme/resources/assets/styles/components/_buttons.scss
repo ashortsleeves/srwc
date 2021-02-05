@@ -36,4 +36,13 @@
       background-color: lighten($green, 5);
     }
   }
+
+  &-orange {
+    background-color: $orange;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($orange, 10);
+    }
+  }
 }

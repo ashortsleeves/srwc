@@ -1,0 +1,76 @@
+.cardstyle {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+}
+
+.jumbo-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ci-border {
+  background-color: $orange;
+  width: 20px;
+  top: -20px;
+  bottom: -20px;
+  position: absolute;
+  border-radius: 10px;
+
+  &:before,
+  &:after {
+    @include pseudo;
+
+    height: 20px;
+    background-color: $orange;
+    width: 20px;
+    transform: skewX(30deg);
+    position: absolute;
+  }
+
+  &:before {
+    width: 140px;
+
+    @include phablet {
+      width: 240px;
+    }
+  }
+
+  &:after {
+    width: 40px;
+  }
+
+  &-1 {
+    right: 100%;
+
+    &:before {
+      bottom: 0;
+      left: 5px;
+    }
+
+    &:after {
+      top: 0;
+      left: 14px;
+    }
+  }
+
+  &-2 {
+    left: 100%;
+
+    &:before {
+      top: 0;
+      right: 5px;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 14px;
+    }
+  }
+}
+
+.wrap {
+  z-index: 998;
+}
