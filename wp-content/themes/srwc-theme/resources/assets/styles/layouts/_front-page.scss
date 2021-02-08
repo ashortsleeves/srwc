@@ -1,7 +1,6 @@
 body.template-front-page {
   section.responsive-hero {
     position: relative;
-    z-index: -1;
     @include jumbo-bg;
 
     height: calc(100vh - 96px);
@@ -100,7 +99,13 @@ body.template-front-page {
       font-weight: bold;
 
       .container {
+        padding: 15px;
         flex-direction: column;
+        text-align: center;
+
+        @include phablet {
+          padding: 30px 15px;
+        }
       }
 
       h1,

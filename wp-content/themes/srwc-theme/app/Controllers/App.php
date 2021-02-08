@@ -43,7 +43,11 @@ class App extends Controller
 
     public function footer() {
       $data = [
-        'cta' => get_field('contact_footer_content', 'option'),
+        'cta'         => get_field('contact_footer_content', 'option'),
+        'map-content' => get_field('footer_map_content','option'),
+        'logo' => get_field('footer_logo','option'),
+        'site-info' => get_field("site_info", 'option'),
+
       ];
 
       return $data;
