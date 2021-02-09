@@ -38,6 +38,7 @@ h1,
   font-weight: $h1-weight;
   font-size: $h1-size;
   line-height: 1;
+  margin-bottom: 15px;
 }
 
 h2,
@@ -47,6 +48,7 @@ h2,
   font-weight: $h2-weight;
   font-size: $h2-size;
   line-height: 1;
+  margin-bottom: 15px;
 }
 
 h3,
@@ -56,6 +58,7 @@ h3,
   font-weight: $h3-weight;
   font-size: $h3-size;
   line-height: 1;
+  margin-bottom: 15px;
 }
 
 p,
@@ -112,4 +115,41 @@ ul.nav a {
 
 .inline-block {
   display: inline-block;
+}
+
+.cardstyle {
+  @include cardstyle;
+}
+
+img.cardstyle {
+  padding: 0;
+}
+
+.jumbo-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  @include desktop {
+    max-width: 1400px;
+  }
+}
+
+.wp-block-image {
+  .alignleft {
+    margin: 30px 0;
+
+    @include phablet {
+      margin: 15px 30px 15px 0;
+    }
+  }
+  .alignright {
+    margin: 30px 0;
+
+    @include phablet {
+      margin: 15px 0 15px 30px;
+    }
+  }
 }

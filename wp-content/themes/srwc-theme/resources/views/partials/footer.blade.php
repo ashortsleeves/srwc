@@ -43,8 +43,32 @@
       @endif
       @if($footer['site-info']['twitter'])
         <a class="social-icon" href="{!!$footer['site-info']['twitter']!!}"><i class="fab fa-twitter"></i></a>
-      @endif    
+      @endif
     </div>
-
   </div>
 </footer>
+<div class="copyright">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-copyright">
+        © Copyright {{ date("Y") }} - Saco River Wildlife Center - Website by Craft Iconic
+      </div>
+    </div>
+  </div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "{{ get_bloginfo('name', 'display') }}",
+  "telephone": "207-512-8934",
+  "address":
+  [
+    "@type": "PostalAddress",
+    "streetAddress": "{!! $footer['site_info']['address'] !!}",
+    "addressLocality": "{!! $footer['site_info']['town'] !!}",
+    "addressRegion": "{!! $footer['site_info']['state'] !!}",
+    "postalCode": "{!! $footer['site_info']['zip'] !!}"
+  ]
+}
+</script>

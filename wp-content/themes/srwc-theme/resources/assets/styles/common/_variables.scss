@@ -163,6 +163,12 @@ $width_hd:              1600px;
   background-repeat: no-repeat;
 }
 
+@mixin cardstyle {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+}
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
