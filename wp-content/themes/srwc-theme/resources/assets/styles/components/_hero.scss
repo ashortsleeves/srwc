@@ -1,10 +1,64 @@
 section.responsive-hero {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
 
   @include tablet {
     height: 50vh;
   }
 
   @include jumbo-bg;
+}
+
+.responsive-hero {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  h1 {
+    color:#fff;
+    text-shadow: 2px 2px 11px rgba(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+  }
+}
+
+img.pine {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    max-width: 100%;
+    display: none;
+
+    @include tablet {
+      top: -50px;
+      display: block;
+    }
+}
+
+.page-header {
+  h1 {
+    @include mobile {
+      font-size: 48px;
+    }
+
+    @include laptop {
+      font-size: 60px;
+    }
+  }
+}
+
+.simple-header {
+  padding-top: 60px;
+
+  @include tablet {
+    padding-top: 210px;
+  }
+
+  @include desktop {
+    padding-top: 235px;
+
+    h1 {
+      margin-bottom: -30px;
+      color: $orange;
+    }
+  }
 }

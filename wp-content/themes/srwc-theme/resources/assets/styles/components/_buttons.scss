@@ -45,4 +45,13 @@
       background-color: lighten($orange, 10);
     }
   }
+
+  &-red {
+    background-color: $red;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($red, 10);
+    }
+  }
 }

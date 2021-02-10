@@ -58,18 +58,6 @@
   }
 }
 
-.simple-header {
-  padding-top: 60px;
-
-  @include tablet {
-    padding-top: 210px;
-  }
-
-  @include desktop {
-    padding-top: 215px;
-  }
-}
-
 .is-style-rounded {
   img {
     @include cardstyle;
@@ -84,15 +72,22 @@
     padding: 30px 15px;
   }
 
-  // @include desktop {
-  //   padding: 60px 15px;
-  // }
+  @include laptop {
+    padding: 90px 15px;
+  }
+
+  @include desktop {
+    padding: 120px 15px;
+  }
 
   a.btn {
     margin-bottom: 15px;
   }
 }
 
+img.cardstyle {
+  margin-bottom: 15px;
+}
 
 .image-row {
   img.cardstyle {
@@ -144,37 +139,49 @@
   }
 }
 
-.responsive-hero {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
 
-  h1 {
-    color:#fff;
-    text-shadow: 2px 2px 11px rgba(0, 0, 0, 0.5);
+  @include tablet {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
-img.pine {
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    max-width: 100%;
-    display: none;
 
-    @include tablet {
-      top: -50px;
-      display: block;
-    }
+a.cardstyle-link {
+  display: block;
+
+  h2 {
+    color: #fff;
+    text-shadow: 2px 2px 11px rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
 }
 
-.page-header {
-  h1 {
-    @include mobile {
-      font-size: 48px;
-    }
+.getinvolved-row a.cardstyle-link {
+  min-height: 300px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
 
-    @include laptop {
-      font-size: 60px;
-    }
+.myth-red {
+  font-style: italic;
+
+  strong {
+    color: $red;
+    font-family: $secondary-font;
+      font-style: normal;
+  }
+}
+
+.myth-green {
+  strong {
+    color: $green;
+    font-family: $secondary-font;
   }
 }

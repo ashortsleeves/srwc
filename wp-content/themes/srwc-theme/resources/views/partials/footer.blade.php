@@ -36,13 +36,13 @@
         <a class="social-icon" href="{!!$footer['site-info']['facebook']!!}"><i class="fab fa-facebook"></i></a>
       @endif
       @if($footer['site-info']['instagram'])
-        <a class="social-icon" href="{!!$footer['site-info']['instagram']!!}"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['instagram']!!}"><i class="fab fa-instagram"></i></a>
       @endif
       @if($footer['site-info']['tiktok'])
-        <a class="social-icon" href="{!!$footer['site-info']['tiktok']!!}"><i class="fab fa-tiktok"></i></a>
+        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['tiktok']!!}"><i class="fab fa-tiktok"></i></a>
       @endif
       @if($footer['site-info']['twitter'])
-        <a class="social-icon" href="{!!$footer['site-info']['twitter']!!}"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['twitter']!!}"><i class="fab fa-twitter"></i></a>
       @endif
     </div>
   </div>
@@ -51,7 +51,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-copyright">
-        © Copyright {{ date("Y") }} - Saco River Wildlife Center - Website by Craft Iconic
+        © Copyright {{ date("Y") }} - Saco River Wildlife Center - Website by <a target="_blank" href="https://www.crafticonic.com/">Craft Iconic Web Design</a>
       </div>
     </div>
   </div>
