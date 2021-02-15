@@ -25,6 +25,14 @@ header.banner {
     display: inline-block;
     margin-right: auto;
 
+    @include desktop {
+      margin-left: 15px;
+    }
+
+    @include wide {
+      margin-left: 0;
+    }
+
     img {
       height: auto;
       width: 100px;
@@ -130,6 +138,7 @@ header.banner {
           text-transform: capitalize;
           padding: 10px;
           border-bottom: solid 1px #ececec;
+          min-width: 210px;
 
           &:before {
             left: 0;
@@ -148,6 +157,25 @@ header.banner {
           }
         }
       }
+
+      &.current-menu-parent,
+      &.active {
+        > a {
+          color: $orange;
+
+          &:before {
+            @include pseudo;
+
+            top: auto;
+            left: 10px;
+            right: 10px;
+            opacity: 1;
+            bottom: 20px;
+            height: 2px;
+            background-color: $orange;
+          }
+        }
+      }
     }
   }
 
@@ -158,6 +186,10 @@ header.banner {
       position: absolute;
       right: 0;
       top: 7px;
+
+    }
+
+    @include wide {
       margin-right: 0;
     }
   }
