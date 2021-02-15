@@ -49,6 +49,10 @@ img.pine {
 .simple-header {
   padding-top: 60px;
 
+  h1 {
+    color: $orange;
+  }
+
   @include tablet {
     padding-top: 210px;
   }
@@ -58,7 +62,6 @@ img.pine {
 
     h1 {
       margin-bottom: -30px;
-      color: $orange;
     }
   }
 }

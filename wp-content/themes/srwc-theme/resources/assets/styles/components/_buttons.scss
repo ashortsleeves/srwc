@@ -1,8 +1,9 @@
-.btn {
+.btn,
+.comment-form input[type="submit"], .search-form .search-submit, .gform_wrapper .gform_footer input[type=submit] {
   padding: 10px;
   color: #fff;
   background-color: $green;
-
+  border: transparent;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;

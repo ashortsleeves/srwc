@@ -8,6 +8,7 @@
     </div>
   </div>
 </section>
+@if(basename(get_page_template()) !== "template-contact.blade.php")
 <section class="footer-map">
   <div class="container">
     <div class="row">
@@ -22,6 +23,7 @@
     </div>
   </div>
 </section>
+@endif
 <footer class="content-info">
   <div class="container">
     <img src="{{$footer['logo']['url']}}" alt="{{ get_bloginfo('name', 'display') }}"  />
