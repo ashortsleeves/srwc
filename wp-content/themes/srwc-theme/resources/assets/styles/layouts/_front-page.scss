@@ -3,32 +3,48 @@ body.template-front-page {
     position: relative;
     @include jumbo-bg;
 
-    height: calc(100vh - 96px);
+    flex-direction: column;
+    height: 550px;
+    background-size: calc(100% + 100px) auto;
+    background-position: top right;
     width: 100%;
+    overflow: hidden;
+
+    @include mobile {
+      background-position: center;
+      min-height: inherit;
+      background-size: cover;
+      height: calc(100vh - 96px);
+      overflow: visible;
+    }
 
     @include tablet {
       height: 100vh;
     }
 
-    .container {
+    > .container {
       height: 100%;
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
 
       @include mobile {
         padding: 35px;
         justify-content: flex-start;
+        align-items: center;
       }
 
       .cta {
         background-color: #fff;
-        padding: 15px;
-        max-width: 290px;
+        padding: 25px 15px 10px;
+        // max-width: 290px;
         position: relative;
+
 
         @include mobile {
           max-width: 600px;
+          padding: 25px 15px;
         }
 
         @include phablet {
@@ -86,17 +102,29 @@ body.template-front-page {
             margin: 0 30px 0 0;
           }
         }
+
+        a.btn-darkgreen {
+          margin: 0 0 15px 0;
+
+          @include mobile {
+              margin: 0;
+          }
+        }
       }
     }
 
     .strapline {
-      position: absolute;
+      position: relative;
       left: 0;
       right: 0;
       bottom: 0;
       background-color: $darkgreen;
       color: #fff;
       font-weight: bold;
+
+      @include mobile {
+        position: absolute;
+      }
 
       .container {
         padding: 15px;
