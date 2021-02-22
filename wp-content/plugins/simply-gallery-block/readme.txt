@@ -106,6 +106,11 @@ Please note that you easily convert block gallery from Masonry to Justified or t
 Yes! SimpLy Gallery Blocks's core features are absolutely free.
 
 == Changelog ==
+= 1.8.4 =
+* Added: Custom CSS Editor for gallery blocks
+* Added: Support for Featured Images for videos (Media Library)
+* Added: Premium List Block
+
 = 1.8.3 =
 * Added: Capabilities editor for Admin and Editor Roles - Multisite (Wordpress MU)
 * Fixed: WPML

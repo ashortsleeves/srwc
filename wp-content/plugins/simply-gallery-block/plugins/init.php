@@ -122,7 +122,7 @@ function pgc_sgb_plugin_options_assets()
         $pgc_sgb_plugin_slug . '-page-settings',
         // Handle.
         plugins_url( 'dist/page.build.style.css', dirname( __FILE__ ) ),
-        array( 'wp-components' ),
+        array( 'wp-components', 'code-editor' ),
         $pgc_sgb_version
     );
     wp_enqueue_script(
@@ -132,7 +132,9 @@ function pgc_sgb_plugin_options_assets()
         'wp-api',
         'wp-element',
         'wp-i18n',
-        'wp-components'
+        'wp-components',
+        'code-editor',
+        'csslint'
     ),
         $pgc_sgb_version,
         true
@@ -230,8 +232,6 @@ function pgc_sgb_plugin_lightbox_options_assets()
         'nonce'          => wp_create_nonce( 'pgc-sgb-nonce' ),
         'globalLightbox' => $pgc_sgb_global_lightbox_use,
         'lightboxPreset' => get_option( 'pgc_sgb_lightbox' ),
-        'isPremium'      => json_encode( pgc_sgb_fs()->can_use_premium_code() ),
-        'isPro'          => json_encode( pgc_sgb_fs()->is_plan_or_trial( 'pro' ) ),
         'version'        => $pgc_sgb_version,
     );
     wp_localize_script( $pgc_sgb_plugin_slug . '-lightbox-page-settings-script', 'PGC_SGB_OPTIONS_PAGE', $globalJS );

@@ -66,7 +66,7 @@ function pgc_sgb_block_assets()
     wp_register_style(
         $pgc_sgb_slug . '-editor',
         plugins_url( 'dist/blocks.build.style.css', dirname( __FILE__ ) ),
-        array(),
+        array( 'code-editor' ),
         $pgc_sgb_version
     );
     wp_register_script(
@@ -99,6 +99,8 @@ function pgc_sgb_block_assets()
         'media',
         'media-grid',
         'backbone',
+        'code-editor',
+        'csslint',
         $pgc_sgb_slug . '-script'
     ),
         $pgc_sgb_version,

@@ -6,7 +6,7 @@
  * Description: The highly customizable Lightbox for native WordPress Gallery/Image. And beautiful gallery blocks with advanced Lightbox for photographers, video creators, writers and content marketers. This blocks set will help you create responsive Images, Video, Audio gallery. Three desired layout in one plugin - Masonry, Justified and Grid.  
  * Author: GalleryCreator
  * Author URI: https://blockslib.com/
- * Version: 1.8.3
+ * Version: 1.8.4
  * Text Domain: simply-gallery-block
  * Domain Path: /languages
  * License: GPL2+
@@ -63,7 +63,7 @@ if ( function_exists( 'pgc_sgb_fs' ) ) {
         do_action( 'pgc_sgb_fs_loaded' );
     }
     
-    $pgc_sgb_version = '1.8.3';
+    $pgc_sgb_version = '1.8.4';
     $pgc_sgb_skins_list = array();
     $pgc_sgb_skins_presets = array();
     $pgc_sgb_plugin_dir = plugin_dir_path( __FILE__ );
