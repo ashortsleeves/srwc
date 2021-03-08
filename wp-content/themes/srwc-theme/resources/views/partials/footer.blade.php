@@ -63,14 +63,17 @@
   "@context": "http://schema.org/",
   "@type": "LocalBusiness",
   "name": "{{ get_bloginfo('name', 'display') }}",
-  "telephone": "207-512-8934",
+  "image": "{!!$header['logo']['url']!!}",
+  "telephone": "{!! $footer['site_info']['phone'] !!}",
+  "sameAs": ["{!! $footer['site_info']['facebook'] !!}", "{!! $footer['site_info']['instagram'] !!}", "{!! $footer['site_info']['tiktok'] !!}"]
   "address":
-  [
+  {
     "@type": "PostalAddress",
     "streetAddress": "{!! $footer['site_info']['address'] !!}",
     "addressLocality": "{!! $footer['site_info']['town'] !!}",
     "addressRegion": "{!! $footer['site_info']['state'] !!}",
-    "postalCode": "{!! $footer['site_info']['zip'] !!}"
-  ]
+    "postalCode": "{!! $footer['site_info']['zip'] !!}",
+    "addressCountry": "US"
+  }
 }
 </script>

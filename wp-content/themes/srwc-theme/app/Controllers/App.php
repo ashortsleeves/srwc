@@ -45,8 +45,8 @@ class App extends Controller
       $data = [
         'cta'         => get_field('contact_footer_content', 'option'),
         'map-content' => get_field('footer_map_content','option'),
-        'logo' => get_field('footer_logo','option'),
-        'site-info' => get_field("site_info", 'option'),
+        'logo'        => get_field('footer_logo','option'),
+        'site_info'   => get_field('site_info', 'option'),
 
       ];
 
