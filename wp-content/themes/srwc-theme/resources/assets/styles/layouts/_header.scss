@@ -156,6 +156,10 @@ header.banner {
             }
           }
         }
+
+        li.active > a:before {
+          display: none;
+        }
       }
 
       &.current-menu-parent,
