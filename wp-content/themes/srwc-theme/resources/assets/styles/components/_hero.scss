@@ -4,6 +4,7 @@ section.responsive-hero {
 
   @include tablet {
     height: 50vh;
+    min-height: 768px;
   }
 
   @include jumbo-bg;

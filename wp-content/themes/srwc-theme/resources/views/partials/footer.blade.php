@@ -34,17 +34,17 @@
       @endif
     </nav>
     <div class="socials">
-      @if($footer['site-info']['facebook'])
-        <a class="social-icon" href="{!!$footer['site-info']['facebook']!!}"><i class="fab fa-facebook"></i></a>
+      @if ($footer['site_info']['facebook'])
+        <a target="_blank" class="social-icon" href="{!!$footer['site_info']['facebook']!!}"><i class="fab fa-facebook"></i></a>
       @endif
-      @if($footer['site-info']['instagram'])
-        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['instagram']!!}"><i class="fab fa-instagram"></i></a>
+      @if ($footer['site_info']['instagram'])
+        <a target="_blank" target="_blank" class="social-icon" href="{!!$footer['site_info']['instagram']!!}"><i class="fab fa-instagram"></i></a>
       @endif
-      @if($footer['site-info']['tiktok'])
-        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['tiktok']!!}"><i class="fab fa-tiktok"></i></a>
+      @if ($footer['site_info']['tiktok'])
+        <a target="_blank" target="_blank" class="social-icon" href="{!!$footer['site_info']['tiktok']!!}"><i class="fab fa-tiktok"></i></a>
       @endif
-      @if($footer['site-info']['twitter'])
-        <a target="_blank" class="social-icon" href="{!!$footer['site-info']['twitter']!!}"><i class="fab fa-twitter"></i></a>
+      @if($footer['site_info']['twitter'])
+        <a target="_blank" class="social-icon" href="{!!$footer['site_info']['twitter']!!}"><i class="fab fa-twitter"></i></a>
       @endif
     </div>
   </div>
