@@ -61,6 +61,7 @@
 .is-style-rounded {
   img {
     @include cardstyle;
+    border-radius: 20px!important;
     padding: 0;
   }
 }
@@ -211,4 +212,8 @@ ul.blocks-gallery-grid {
       margin-bottom: 0px;
     }
   }
+}
+
+.container-404 {
+  padding-top: 75px;
 }
